@@ -1,0 +1,89 @@
+/* insert.css - horizontal form layout with text alignment */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(123, 221, 53);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Center the form container */
+form#animalForm {
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: left; /* align form content to left for better horizontal layout */
+}
+
+/* Horizontal field layout */
+.form-field {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+    gap: 15px; /* space between label and input */
+}
+
+/* Labels */
+.form-field label {
+    width: 120px; /* fixed label width */
+    font-weight: bold;
+    text-align: right; /* label text right aligned */
+    color: #2c3e50;
+}
+
+/* Inputs and selects */
+.form-field input,
+.form-field select {
+    padding: 8px;
+    flex: 1; /* fill remaining space for responsiveness */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: left; /* align input/select text left */
+}
+
+/* Optional: center placeholder text */
+.form-field input::placeholder {
+    text-align: left;
+}
+
+/* Buttons container */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color:black;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Save button */
+button[name="save"] {
+    background-color: black;
+}
+
+button[name="save"]:hover {
+    background-color: #2ecc71;
+}
+
+/* View List button */
+button[name="view"] {
+    background-color: #2980b9;
+}
+
+button[name="view"]:hover {
+    background-color: #3498db;
+}
